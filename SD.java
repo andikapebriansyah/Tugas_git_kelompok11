@@ -23,6 +23,8 @@ public class SD extends School implements Extracurricular {
         super(grade);
         this.codeClass = codeClass;
         maxStudent = studentNum;
+        students = new ArrayList<Student>();
+        teachers = new ArrayList<Teacher>();
     }
 
     /**
@@ -102,5 +104,24 @@ public class SD extends School implements Extracurricular {
     @Override
     public String NameOfExc() {
         return "Pramuka, Rohis, OSIS";
+    }
+    
+    public void printList()
+    {
+        System.out.println("\t\t+-----------------------+");
+        System.out.println("\t\t|\tSiswa SD\t|");
+        System.out.println("\t\t+-----------------------+");
+        System.out.println("Room: " + codeClass + "\n");
+        System.out.println("Class list:");
+        for(Student student : students) {
+            System.out.print("- ");
+            student.print();
+        }
+        System.out.println("\nTeacher: ");
+        for(Teacher teacher : teachers) {
+            System.out.print("- ");
+            teacher.print();
+        }
+        System.out.println("\nNumber of students: " + students.size());
     }
 }
