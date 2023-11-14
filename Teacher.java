@@ -9,6 +9,7 @@ public class Teacher extends Person
 {
     // instance variables - replace the example below with your own
     private int Nip;
+    private String course;
     /**
      * Constructor for objects of class teacher
      */
@@ -31,5 +32,15 @@ public class Teacher extends Person
 
     public void setNip(int nip) {
         Nip = nip;
+    }
+    
+    public void setCourse(Course newCourse)
+    {
+        course = newCourse.getName();
+    }
+    
+    public void print()
+    {
+        System.out.println(getName() + " (" + course + ")");
     }
 }
