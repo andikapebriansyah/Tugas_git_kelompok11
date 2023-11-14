@@ -42,4 +42,9 @@ public class Student extends Person
    public void setCreditSkor(int creditSkor) {
        this.creditSkor = creditSkor;
    }
+   
+   public void print()
+    {
+        System.out.println(getName() + " (" + Nis + ")");
+    }
 }
